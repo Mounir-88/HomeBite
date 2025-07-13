@@ -1,0 +1,41 @@
+name: React CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    - name: Install Dependencies
+      run: npm ci
+
+    - name: Fix Vite Permission
+      run: chmod +x ./node_modules/.bin/vite
+
+    - name: Run ESLint
+      run: npm run lint
+
+    - name: Build Project
+      run: npm run build
+
+    - name: Run Tests
+      run: npm run test
+
+    - name: Upload Build Artifact (Optional)
+      uses: actions/upload-artifact@v4
+      with:
+        name: build
+        path: dist
