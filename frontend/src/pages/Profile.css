@@ -1,0 +1,21 @@
+.profile-page {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logout-button {
+  margin-top: 1.5rem;
+  padding: 0.75rem 2rem;
+  background-color: var(--color-deep-purple);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: var(--color-main-dark);
+}

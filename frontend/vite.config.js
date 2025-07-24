@@ -4,7 +4,7 @@ import { configDefaults } from 'vitest/config'
 
 export default defineConfig({
   plugins: [react()],
-  base: "/CI-Pipeline/",
+  base: "/",
   test: {
     globals: true,
     environment: 'jsdom',

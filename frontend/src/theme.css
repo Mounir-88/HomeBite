@@ -1,0 +1,59 @@
+/* theme.css */
+
+/* Color Palette */
+:root {
+  --color-light-bg: #FFFBEB;
+  --color-soft-dark: #495579;
+  --color-main-dark: #263159;
+  --color-deep-purple: #251749;
+}
+
+/* Backgrounds */
+body {
+  background-color: var(--color-light-bg);
+  color: var(--color-main-dark);
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--color-main-dark);
+  color: white;
+}
+
+.navbar a {
+  color: white;
+}
+
+.navbar a:hover {
+  color: var(--color-light-bg);
+}
+
+/* Buttons */
+button,
+.cta-button {
+  background-color: var(--color-soft-dark);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button:hover,
+.cta-button:hover {
+  background-color: var(--color-deep-purple);
+}
+
+/* Cards */
+.category-card {
+  background-color: var(--color-soft-dark);
+  color: white;
+}
+
+.category-card:hover {
+  background-color: var(--color-deep-purple);
+}

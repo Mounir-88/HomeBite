@@ -1,18 +1,25 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from "./pages/Home"
+import './theme.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+import Admin from './pages/Admin';
+import Profile from './pages/Profile';
 
 function App() {
   return (
-    <BrowserRouter basename="/CI-Pipeline">
+    <Router>
+      <Navbar />
       <Routes>
-        {/* Your routes here */}
         <Route path="/" element={<Home />} />
-        <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
-        {/* Other routes */}
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/admin" element={<Admin />} />        
+        <Route path="/profile" element={<Profile />} />
       </Routes>
-    </BrowserRouter>
-  )
+    </Router>
+  );
 }
 
-export default App
+export default App;

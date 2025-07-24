@@ -1,0 +1,28 @@
+.admin-page {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.admin-section {
+  margin: 2rem 0;
+}
+
+.admin-section input {
+  padding: 0.5rem;
+  width: 70%;
+  margin-right: 1rem;
+}
+
+.admin-section button {
+  padding: 0.5rem 1rem;
+  background-color: var(--color-soft-dark);
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.admin-section button:hover {
+  background-color: var(--color-deep-purple);
+}
